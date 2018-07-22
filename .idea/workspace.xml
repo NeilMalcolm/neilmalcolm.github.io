@@ -2,28 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="693d660f-354b-4315-8b3c-9470df5dfaa7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/Gemfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/Gemfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/_config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/_includes/disqus_comments.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/_includes/footer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/_includes/google-analytics.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/_includes/head.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/_includes/header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/_includes/icon-github.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/_includes/icon-github.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/_includes/icon-twitter.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/_includes/icon-twitter.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/_includes/social.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/_layouts/default.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/_layouts/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/_layouts/page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/_layouts/post.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/about.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/img/profile-small.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 10.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 11.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 12.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 13.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 14.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 15.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 16.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 17.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 18.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 19.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 2.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 20.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 21.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 22.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 23.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 24.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 25.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 26.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 3.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 4.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 5.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 6.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 7.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 8.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy 9.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll copy.markdown" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/_posts/2018-07-22-welcome-to-jekyll.markdown" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -38,11 +44,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+            <state relative-caret-position="171">
+              <caret line="143" column="81" lean-forward="true" selection-start-line="143" selection-start-column="81" selection-end-line="143" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -50,17 +56,17 @@
       <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+            <state relative-caret-position="71">
+              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="footer.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            <state relative-caret-position="46">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -68,8 +74,8 @@
       <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+            <state relative-caret-position="345">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -133,11 +139,11 @@
         <option value="$PROJECT_DIR$/blog/_config.yml" />
         <option value="$PROJECT_DIR$/blog/_includes/header.html" />
         <option value="$PROJECT_DIR$/blog/Gemfile" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/blog/index.html" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_includes/header.html" />
         <option value="$PROJECT_DIR$/_includes/footer.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -158,8 +164,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="278" />
-    <option name="y" value="519" />
+    <option name="x" value="232" />
+    <option name="y" value="205" />
     <option name="width" value="1419" />
     <option name="height" value="879" />
   </component>
@@ -220,26 +226,27 @@
       <workItem from="1532001321475" duration="10824000" />
       <workItem from="1532251722750" duration="13800000" />
       <workItem from="1532280125947" duration="2015000" />
+      <workItem from="1532283051605" duration="316000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36289000" />
+    <option name="totallyTimeSpent" value="36605000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="278" y="519" width="1419" height="879" extended-state="0" />
+    <frame x="232" y="205" width="1419" height="879" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16842847" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -272,12 +279,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18423">
           <caret line="801" column="5" selection-start-line="801" selection-start-column="5" selection-end-line="801" selection-end-column="5" />
-          <folding>
-            <element signature="e#133#755#1" expanded="true" />
-            <element signature="e#788#1410#1" expanded="true" />
-            <marker date="1532259184936" expanded="true" signature="2301:2426" ph="..." />
-            <marker date="1532259184936" expanded="true" signature="5933:6037" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -299,12 +300,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1564">
           <caret line="68" column="23" lean-forward="true" selection-start-line="68" selection-start-column="23" selection-end-line="71" selection-end-column="30" />
-          <folding>
-            <element signature="e#133#755#1" expanded="true" />
-            <element signature="e#788#1410#1" expanded="true" />
-            <marker date="1532259184936" expanded="true" signature="2301:2426" ph="..." />
-            <marker date="1532259184936" expanded="true" signature="5933:6037" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -326,12 +321,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15203">
           <caret line="661" column="1" selection-start-line="661" selection-start-column="1" selection-end-line="661" selection-end-column="1" />
-          <folding>
-            <element signature="e#133#755#1" expanded="true" />
-            <element signature="e#788#1410#1" expanded="true" />
-            <marker date="1532259184936" expanded="true" signature="2301:2426" ph="..." />
-            <marker date="1532259184936" expanded="true" signature="5933:6037" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -346,12 +335,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15042">
           <caret line="654" column="1" lean-forward="true" selection-start-line="654" selection-start-column="1" selection-end-line="654" selection-end-column="1" />
-          <folding>
-            <element signature="e#133#755#1" expanded="true" />
-            <element signature="e#788#1410#1" expanded="true" />
-            <marker date="1532259184936" expanded="true" signature="2301:2426" ph="..." />
-            <marker date="1532259184936" expanded="true" signature="5933:6037" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -376,12 +359,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1311">
           <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
-          <folding>
-            <element signature="e#133#755#1" expanded="true" />
-            <element signature="e#788#1410#1" expanded="true" />
-            <marker date="1532259184936" expanded="true" signature="2301:2426" ph="..." />
-            <marker date="1532259184936" expanded="true" signature="5933:6037" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -399,12 +376,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding>
-            <element signature="e#133#755#1" expanded="true" />
-            <element signature="e#788#1410#1" expanded="true" />
-            <marker date="1532259184936" expanded="true" signature="2301:2426" ph="..." />
-            <marker date="1532259184936" expanded="true" signature="5933:6037" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -422,12 +393,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding>
-            <element signature="e#133#755#1" expanded="true" />
-            <element signature="e#788#1410#1" expanded="true" />
-            <marker date="1532259184936" expanded="true" signature="2301:2426" ph="..." />
-            <marker date="1532259184936" expanded="true" signature="5933:6037" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -463,12 +428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
           <caret line="335" column="27" selection-start-line="335" selection-start-column="27" selection-end-line="335" selection-end-column="27" />
-          <folding>
-            <element signature="e#133#755#1" expanded="true" />
-            <element signature="e#788#1410#1" expanded="true" />
-            <marker date="1532259184936" expanded="true" signature="2301:2426" ph="..." />
-            <marker date="1532259184936" expanded="true" signature="5933:6037" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -504,45 +463,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/index.html">
+    <entry file="file://$PROJECT_DIR$/blog/index.html" />
+    <entry file="file://$PROJECT_DIR$/blog/_includes/social.html" />
+    <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="71">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Documents/GitHub/neilmalcolm.github.io/blog/_includes/social.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="68" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="24" column="3" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        <state relative-caret-position="345">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        <state relative-caret-position="46">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="143" column="81" lean-forward="true" selection-start-line="143" selection-start-column="81" selection-end-line="143" selection-end-column="81" />
         </state>
       </provider>
     </entry>
