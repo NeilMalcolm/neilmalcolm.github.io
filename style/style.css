@@ -495,6 +495,20 @@ img {
 	text-align: left;
 }
 
+.project-paragraph a
+{
+	color: #0C8EED;
+	transition: 0.1s;
+	text-decoration: none;
+}
+
+.project-paragraph a:hover
+{
+	color: #1073ed;
+	transition: 0.2s;
+	text-decoration: underline;
+}
+
 .project-inner h3
 {
 	color: #0C8EED;
@@ -920,6 +934,12 @@ img {
 		max-width: 120px;
 	}
 
+	.single-img
+	{
+		width: 85%;
+		max-width: none;
+	}
+
 	.project-img-container, .alt-project .project-img-container
 	{
 		width: 70%;
@@ -994,6 +1014,12 @@ img {
 	.project-img
 	{
 		max-width: 120px;
+	}
+
+	.single-img
+	{
+		width: 85%;
+		max-width: none;
 	}
 
 	.project-img-container, .alt-project .project-img-container
@@ -1191,6 +1217,12 @@ img {
 	{
 		margin: 0 auto 1.5em auto;
 	}
+
+	.single-img
+	{
+		width: 85%;
+		max-width: none;
+	}
 }
 
 @media only screen and (max-width: 365px)
@@ -1222,5 +1254,11 @@ img {
 	{
 		width: 90%;
 		margin: 0 auto 2em auto;
+	}
+
+	.single-img
+	{
+		width: 85%;
+		max-width: none;
 	}
 }
