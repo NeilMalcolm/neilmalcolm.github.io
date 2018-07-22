@@ -1,0 +1,21 @@
+<style>
+  #profile-image
+  {
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    margin-right: 10px;
+  }
+
+  .site-header
+  {
+    padding: 10px 0;
+  }
+</style>
+<header class="site-header" role="banner">
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="{{url}}">
+    <img id="profile-image" src="{{url}}/img/profile-small.jpg" height="60" width="60"/> {{ site.title | escape }}</a>
+  </div>
+</header>
