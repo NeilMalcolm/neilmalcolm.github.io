@@ -995,6 +995,11 @@ img {
 	{
 		text-align: center;
 	}
+
+	.border-button:hover:after
+	{
+		transform: scale(20);
+	}
 }
 
 @media only screen and (min-width: 600px) and ( max-width: 750px)
@@ -1091,6 +1096,11 @@ img {
 	{
 		margin: 0 auto 1.5em auto;
 	}
+
+	.border-button:hover:after
+	{
+		transform: scale(20);
+	}
 }
 
 @media only screen and (min-width: 750px) and ( max-width: 1048px)
@@ -1125,6 +1135,11 @@ img {
 	#send
 	{
 		width: 40%;
+	}
+
+	.border-button:hover:after
+	{
+		transform: scale(20);
 	}
 }
 
@@ -1223,6 +1238,11 @@ img {
 		width: 85%;
 		max-width: none;
 	}
+
+	.border-button:hover:after
+	{
+		transform: scale(30);
+	}
 }
 
 @media only screen and (max-width: 365px)
@@ -1260,5 +1280,10 @@ img {
 	{
 		width: 85%;
 		max-width: none;
+	}
+
+	.border-button:hover:after
+	{
+		transform: scale(20);
 	}
 }
