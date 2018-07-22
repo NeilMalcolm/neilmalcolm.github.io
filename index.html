@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Neil's Site</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+	<div id="outer-container">
+		<header id="sticky-bar">
+			<!--<img class="profile-img" src="./img/profile.jpg">-->
+            <i id="hamburger-menu" class="fas fa-bars"></i>
+
+            <div class="name-and-title">
+				<span class="bar-name">Neil Malcolm</span>
+				<span class="bar-title">Software Developer</span>
+			</div>
+
+			<nav id="sticky-bar-links" class="sticky-bar-links">
+				<a id="about-button" class="sticky-bar-alt-link white-button">About</a>
+				<a id="project-button" class="sticky-bar-alt-link white-button">Projects</a>
+				<a id="contact-button" class="sticky-bar-alt-link white-button">Contact</a>
+                <a href="./blog/_site/index.html" id="blog-link" class="sticky-bar-alt-link blue-button"><span class="inner">Blog</span></a>
+			</nav>
+            <a href="#" id="blog-button" class="sticky-bar-alt-link blue-button"><span class="inner">Blog</span></a>
+		</header>
+
+		<div id="main-container">
+            <header id="top-bar">
+                <!--<img class="profile-img" src="./img/profile.jpg">-->
+                <div class="name-and-title">
+                    <span class="bar-name">Neil Malcolm</span>
+                    <span class="bar-title">Software Developer</span>
+                </div>
+                <nav id="top-bar-links" class="sticky-bar-links horizontal-list">
+                    <a id="top-about-button" class="sticky-bar-alt-link dark-transparent-button">About</a>
+                    <a id="top-project-button" class="sticky-bar-alt-link dark-transparent-button">Projects</a>
+                    <a id="top-contact-button" class="sticky-bar-alt-link dark-transparent-button">Contact</a>
+                    <a href="./blog/_site/index.html" class="sticky-bar-alt-link wide-button border-button"><span class="inner">Blog</span></a>
+                </nav>
+            </header>
+
+			<section id="about" class="page-section">
+                <div id="about-inner">
+                    <img class="profile-img large" src="./img/profile.jpg">
+                    <div id="about-inner-right">
+                        <h2>Neil Malcolm</h2>
+                        <p>I am a software developer from Scotland, working as a Xamarin developer working with Xamarin.Forms daily!
+                            <br><br>
+                            My main interests are in mobile development, front-end development, UI design and UX.
+                            <br><br>
+                            Check out my projects below, or checkout my Github</p>
+                        <a href="https://www.twitter.com/neilmalcolmdev" class="sticky-bar-alt-link icon-button border-button"><span><i class="fab fa-twitter"></i>Twitter</span></a>
+                        <a href="https://www.github.com/neilmalcolm" class="sticky-bar-alt-link icon-button border-button"><span><i class="fab fa-github-alt"></i>GitHub</span></a>
+                    </div>
+                </div>
+			</section>
+
+			<section id="projects" class="page-section off-screen">
+				<section id="forms-alarm-app" class="project">
+					<div class="project-container">
+                        <div class="project-img-container">
+                            <img class="project-img" src="./img/alarm-iphone.png">
+                            <img class="project-img" src="./img/alarm-android.png">
+                        </div>
+                        <div class="project-inner">
+                            <h3>Xamarin.Forms Alarm App</h3>
+                            <p class="project-paragraph">
+                                My current project is a simple app that allows the user to create a number of alarms at a given interval between to times. This helps deep sleepers, like me, to make sure they wake up on Monday mornings!
+<br><br>
+                                An alarm app that leverages the Xamarin.Forms platform to provide a cross-platform iOS and Android application.
+                            </p>
+                            <ul class="project-tag-list">
+                                <li><span class="proj-tag">Xamarin.Forms</span></li><!--
+                                --><li><span class="proj-tag">C#</span></li><!--
+                                --><li><span class="proj-tag">Realm</span></li>
+                            </ul>
+
+                            <div class="project-button-container">
+                                <a href="https://github.com/NeilMalcolm/Xamarin.Forms-Alarm-App" class="sticky-bar-alt-link blue-button project-button"><span class="inner">View on GitHub</span></a>
+                            </div>
+                        </div>
+                    </div>
+				</section>
+				<section id="rss-feed-app" class="project alt-project">
+                    <div class="project-container">
+                        <div class="project-inner">
+                            <h3>Android RSS News Feed App</h3>
+                            <p class="project-paragraph">
+                                A small android app which allows the user to add RSS Feeds and view the latest news from these feeds.
+<br><br>
+                                The news shown can be saved in SQLite and viewed at a later date when the user is offline.
+                            </p>
+                            <ul class="project-tag-list">
+                                <li><span class="proj-tag">Android</span></li>
+                                <li><span class="proj-tag">Java</span></li>
+                                <li><span class="proj-tag">SQLite</span></li>
+                                <li><span class="proj-tag">XML</span></li>
+                            </ul>
+                        </div>
+                        <div class="project-img-container">
+                            <img class="project-img" src="./img/android-app-1.png">
+                            <img class="project-img" src="./img/android-app-2.png">
+                        </div>
+                    </div>
+			    </section>
+                <section id="imgrabber" class="project">
+                    <div class="project-container">
+                        <div class="project-img-container">
+                            <img class="project-img" src="./img/profile.jpg">
+                        </div>
+                        <div class="project-inner">
+                            <h3>Imgrabber Chrome Extension</h3>
+                            <p class="project-paragraph">
+                                An unreleased chrome extension that allows the user to download all images in Imgur albums/galleries in a compressed zip file.
+                                <br><br>
+                                The extension allows the user to download animated content in either .mp4 or .gif.
+                            </p>
+                            <ul class="project-tag-list">
+                                <li><span class="proj-tag">HTML/CSS</span></li>
+                                <li><span class="proj-tag">Zip.js</span></li>
+                                <li><span class="proj-tag">jQuery</span></li>
+                                <li><span class="proj-tag">JavaScript</span></li>
+                            </ul>
+                            <div class="project-button-container">
+                                <a href="#" class="sticky-bar-alt-link blue-button project-button"><span class="inner">View on GitHub</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="hammerstone" class="project alt-project">
+                    <div class="project-container">
+                        <div class="project-inner">
+                            <h3>Hammerstone Mock Site</h3>
+                            <p class="project-paragraph">
+                                An unreleased chrome extension that allows the user to download all images in Imgur albums/galleries in a compressed zip file.
+                                <br><br>
+                                The extension allows the user to download animated content in either .mp4 or .gif.
+                            </p>
+                            <ul class="project-tag-list">
+                                <li><span class="proj-tag">HTML/CSS</span></li>
+                                <li><span class="proj-tag">jQuery</span></li>
+                                <li><span class="proj-tag">JavaScript</span></li>
+                            </ul>
+                            <div class="project-button-container">
+                                <a href="./sites/Hammerstone/index.html" class="sticky-bar-alt-link blue-button project-button"><span class="inner">Go to site</span></a>
+                            </div>
+                        </div>
+                        <div class="project-img-container">
+                            <img class="project-img single-img" src="./img/hammerstone.png">
+                        </div>
+                    </div>
+                </section>
+
+                <section id="hetlax" class="project">
+                    <div class="project-container">
+                        <div class="project-img-container">
+                            <img class="project-img single-img" src="./img/hetlax.png">
+                        </div>
+                        <div class="project-inner">
+                            <h3>HetLax Mock Site</h3>
+                            <p class="project-paragraph">
+                                An unreleased chrome extension that allows the user to download all images in Imgur albums/galleries in a compressed zip file.
+                                <br><br>
+                                The extension allows the user to download animated content in either .mp4 or .gif.
+                            </p>
+                            <ul class="project-tag-list">
+                                <li><span class="proj-tag">HTML/CSS</span></li>
+                                <li><span class="proj-tag">Zip.js</span></li>
+                                <li><span class="proj-tag">jQuery</span></li>
+                                <li><span class="proj-tag">JavaScript</span></li>
+                            </ul>
+                            <div class="project-button-container">
+                                <a href="./sites/HetLax/index.html" class="sticky-bar-alt-link blue-button project-button"><span class="inner">Go to site</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="win98" class="project alt-project">
+                    <div class="project-container">
+                        <div class="project-inner">
+                            <h3>Windows 98 Mock Site</h3>
+                            <p class="project-paragraph">
+                                An unreleased chrome extension that allows the user to download all images in Imgur albums/galleries in a compressed zip file.
+                                <br><br>
+                                The extension allows the user to download animated content in either .mp4 or .gif.
+                            </p>
+                            <ul class="project-tag-list">
+                                <li><span class="proj-tag">HTML/CSS</span></li>
+                                <li><span class="proj-tag">jQuery</span></li>
+                                <li><span class="proj-tag">JavaScript</span></li>
+                            </ul>
+                            <div class="project-button-container">
+                                <a href="./sites/Windows98/index.html" class="sticky-bar-alt-link blue-button project-button"><span class="inner">Go to site</span></a>
+                            </div>
+                        </div>
+                        <div class="project-img-container">
+                            <img class="project-img single-img" src="./img/windows98.png">
+                        </div>
+                    </div>
+                </section>
+            </section>
+			<section id="contact" class="page-section">
+                <div id="contact-inner">
+                    <form>
+                        <h3>Contact</h3>
+                        <span>Name</span>
+                        <input class="entry" type="text" name="name" placeholder="John Smith">
+                        <span>Email</span>
+                        <input class="entry" type="text" name="email" placeholder="j.smith@example.com">
+                    </form>
+                    <a href="#" id="send" class="sticky-bar-alt-link blue-button project-button"><span class="inner">Send</span></a>
+                </div>
+            </section>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="./scripts/js.js"></script>
+</html>

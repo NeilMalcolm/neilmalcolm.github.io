@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Windows 98</title>
+    <link rel="stylesheet" href="./css/font-awesome-4.6.3/css/font-awesome.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="./css/css.css" media="screen" title="no title">
+  	<script src="./js/jquery-3.1.0.js"></script>
+    <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
+  	<script src="./js/js.js" type="text/javascript" charset="utf-8" async defer></script>
+    <link rel="stylesheet" href="css/css.css">
+  </head>
+  <body>
+     <!-- <div class="flicker-overlay">  </div>
+    <div class="interlace-overlay">
+      <div class="interlace-element"></div><div class="interlace-element"></div><div class="interlace-element"></div>
+    </div> -->
+
+    <div class="desktop">
+      <div class="selection-box hidden-box"></div>
+      <ul class='desktop-icons'>
+        <li class='desktop-icon'>
+          <img src="./img/mycomp.png" alt=""  draggable="false"/>
+          <p draggable="false">
+            My Computer
+          </p>
+        </li>
+        <li class='desktop-icon'>
+          <img src="./img/my-docs.png" alt=""  draggable="false"/>
+          <p draggable="false">
+            My Documents
+          </p>
+        </li>
+        <li class='desktop-icon'>
+          <img src="./img/ie.png" alt=""  draggable="false"/>
+          <p draggable="false">
+            Internet Explorer
+          </p>
+        </li>
+        <li class='desktop-icon'>
+          <img src="./img/network-neighbourhood.png" alt=""  draggable="false"/>
+          <p draggable="false">
+            Network Neighborhood
+          </p>
+        </li>
+        <li class='desktop-icon'>
+          <img src="./img/recycle.png" alt=""  draggable="false"/>
+          <p draggable="false">
+            Recycle Bin
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <section class="taskbar">
+      <div class="left-hand-section"><div class="start-button">
+        <div class="start-menu start-hidden">
+          <div class="column-left">
+            <p>
+              Windows<span>98</span>
+            </p>
+          </div>
+          <div class="column-right">
+            <ul class='start-menu-list'>
+              <li class='start-item'>
+                <div class="with-separator">
+                  <img src="./img/start-item-1.png" alt="" />
+                  <p>Windows Update</p>
+                </div>
+              </li>
+              <li class='start-item has-children'>
+                <img src="./img/start-item-2.png" alt="" />
+                <p>Programs <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                <ul class='inner-menu inner-hidden'>
+                  <li class='start-item  has-children'>
+                    <img src="./img/start-inner-folder.png" alt="" />
+                    <p>Accessories <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+
+                    <ul class='inner-menu inner-hidden'>
+                      <li class='start-item  has-children'>
+                        <img src="./img/start-inner-folder.png" alt="" />
+                        <p>Communications <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                      </li>
+                        <li class='start-item has-children'>
+                          <img src="./img/start-inner-folder.png" alt="" />
+                          <p>Entertainment <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                        </li>
+                        <li class='start-item has-children'>
+                          <img src="./img/start-inner-folder.png" alt="" />
+                          <p>Internet Tools <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                        </li>
+                        <li class='start-item has-children'>
+                          <img src="./img/start-inner-folder.png" alt="" />
+                          <p>System Tools <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                            <ul class='inner-menu inner-hidden'>
+                              <li class='start-item'>
+                                <img src="./img/disk-cleanup.png" alt="" />
+                                <p>Disk Cleanup</p>
+                              </li>
+                              <li class='start-item'>
+                                <img src="./img/defrag.png" alt="" />
+                                <p>Disk Defragmenter</p>
+                              </li>
+                              <li class='start-item'>
+                                <img src="./img/maintenance.png" alt="" />
+                                <p>Maintenance Wizard</p>
+                              </li>
+                              <li class='start-item'>
+                                <img src="./img/scandisk.png" alt="" />
+                                <p>ScanDisk</p>
+                              </li>
+                              <li class='start-item'>
+                                <img src="./img/scheduled-tasks.png" alt="" />
+                                <p>Scheduled Tasks</p>
+                              </li>
+                              <li class='start-item'>
+                                <img src="./img/sys-info.png" alt="" />
+                                <p>System Info</p>
+                              </li>
+                              <li class='start-item'>
+                                <img src="./img/welcome-win.png" alt="" />
+                                <p>Welcome To Windows</p>
+                              </li>
+                            </ul>
+                        </li>
+                        <li class='start-item'>
+                          <img src="./img/address-book.png" alt="" />
+                          <p>Address Book</p>
+                        </li>
+                        <li class='start-item'>
+                          <img src="./img/calculator.png" alt="" />
+                          <p>Calculator</p>
+                        </li>
+                        <li class='start-item'>
+                          <img src="./img/image.png" alt="" />
+                          <p>Imaging</p>
+                        </li>
+                        <li class='start-item'>
+                          <img src="./img/notepad.png" alt="" />
+                          <p>Notepad</p>
+                        </li>
+                        <li class='start-item'>
+                          <img src="./img/paint.png" alt="" />
+                          <p>Paint</p>
+                        </li>
+                        <li class='start-item'>
+                          <img src="./img/wordpad.png" alt="" />
+                          <p>Wordpad</p>
+                        </li>
+                    </ul>
+
+                  </li>
+                    <li class='start-item  has-children'>
+                      <img src="./img/start-inner-folder.png" alt="" />
+                      <p>Online Services <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                    </li>
+                    <li class='start-item'>
+                      <img src="./img/icon2.png" alt="" />
+                      <p>Internet Explorer</p>
+                    </li>
+                    <li class='start-item'>
+                      <img src="./img/ms-dos.png" alt="" />
+                      <p>MS-DOS Prompt</p>
+                    </li>
+                    <li class='start-item'>
+                      <img src="./img/icon3.png" alt="" />
+                      <p>Outlook Express</p>
+                    </li>
+                    <li class='start-item'>
+                      <img src="./img/explorer.png" alt="" />
+                      <p>Windows Explorer</p>
+                    </li>
+                </ul>
+
+              </li>
+              <li class='start-item has-children'>
+                <img src="./img/start-item-3.png" alt="" />
+                <p>Favourites <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+              </li>
+              <li class='start-item has-children'>
+                <img src="./img/start-item-4.png" alt="" />
+                <p>Documents <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+              </li>
+              <li class='start-item has-children'>
+                <img src="./img/start-item-5.png" alt="" />
+                <p>Settings <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+                <ul class='inner-menu inner-hidden'>
+                  <li class='start-item'>
+                    <img src="./img/control-panel.png" alt="" />
+                    <p>Control Panel</p>
+                  </li>
+                  <li class='start-item'>
+                    <img src="./img/printers.png" alt="" />
+                    <p>Printers</p>
+                  </li>
+                  <li class='start-item'>
+                    <img src="./img/taskbar-start.png" alt="" />
+                    <p>Taskbar &amp; Start Menu</p>
+                  </li>
+                  <li class='start-item'>
+                    <img src="./img/explorer.png" alt="" />
+                    <p>Folder Options</p>
+                  </li>
+                  <li class='start-item'>
+                    <div class="with-separator">
+                      <img src="./img/icon1.png" alt="" />
+                      <p>Active Desktop</p>
+                    </div>
+                  </li>
+                    <li class='start-item'>
+                        <img src="./img/update.png" alt="" />
+                        <p>Windows Update</p>
+                    </li>
+                </ul>
+              </li>
+              <li class='start-item has-children'>
+                <img src="./img/start-item-6.png" alt="" />
+                <p>Find <i class="fa fa-caret-right" aria-hidden="true"></i></p>
+              </li>
+              <li class='start-item '>
+                <img src="./img/start-item-7.png" alt="" />
+                <p>Help</p>
+              </li>
+              <li class='start-item'>
+                <div class="with-separator">
+                  <img src="./img/start-item-8.png" alt="" />
+                  <p>Run</p>
+                </div>
+              </li>
+              <li class='start-item '>
+                <img src="./img/start-item-9.png" alt="" />
+                <p>Log Off...</p>
+              </li>
+              <li class='start-item '>
+                <img src="./img/start-item-10.png" alt="" />
+                <p>Shut Down...</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <img src="./img/start.png" alt="" />
+      </div>
+          <ul class='icons'><!--
+          --><li class="icon"><img src="./img/icon1.png" alt="" /></li><!--
+          --><li class="icon"><img src="./img/icon2.png" alt="" /></li><!--
+          --><li class="icon"><img src="./img/icon3.png" alt="" /></li>
+          </ul>
+      </div>
+      <!-- <div class="right-hand-section">
+        <div class="icon"><img src="./img/icon4.png" alt="" /></div><div class="icon"><img src="./img/icon5.png" alt="" /></div><div class="icon"><img src="./img/time.png" alt="" /></div>
+      </div> -->
+    </section>
+  </body>
+</html>
