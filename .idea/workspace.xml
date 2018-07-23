@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="693d660f-354b-4315-8b3c-9470df5dfaa7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,20 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="151" column="34" selection-start-line="151" selection-start-column="34" selection-end-line="151" selection-end-column="34" />
+            <state relative-caret-position="293">
+              <caret line="110" column="74" selection-start-line="110" selection-start-column="74" selection-end-line="110" selection-end-column="74" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="1270" column="5" lean-forward="true" selection-start-line="1270" selection-start-column="5" selection-end-line="1270" selection-end-column="5" />
+            <state relative-caret-position="519">
+              <caret line="1265" column="5" selection-start-line="1265" selection-start-column="5" selection-end-line="1265" selection-end-column="5" />
               <folding>
                 <element signature="e#133#755#1" expanded="true" />
                 <element signature="e#788#1410#1" expanded="true" />
@@ -72,7 +72,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>name-</find>
       <find>hidelinks</find>
       <find>checkforbarsize</find>
       <find>about</find>
@@ -102,6 +101,7 @@
       <find>project-inner-r</find>
       <find>border-button</find>
       <find>border-button:hover:after</find>
+      <find>placeholder</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -130,8 +130,8 @@
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_includes/header.html" />
         <option value="$PROJECT_DIR$/_includes/footer.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/style/style.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -152,7 +152,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="40" />
+    <option name="y" value="61" />
     <option name="width" value="1846" />
     <option name="height" value="1062" />
   </component>
@@ -220,14 +221,16 @@
       <workItem from="1532280125947" duration="2015000" />
       <workItem from="1532283051605" duration="4175000" />
       <workItem from="1532302355222" duration="182000" />
+      <workItem from="1532340713192" duration="620000" />
+      <workItem from="1532353056483" duration="229000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40646000" />
+    <option name="totallyTimeSpent" value="41495000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1846" height="1062" extended-state="0" />
+    <frame x="40" y="61" width="1846" height="1062" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12946913" />
@@ -514,23 +517,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="151" column="34" selection-start-line="151" selection-start-column="34" selection-end-line="151" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/style/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="1270" column="5" lean-forward="true" selection-start-line="1270" selection-start-column="5" selection-end-line="1270" selection-end-column="5" />
+        <state relative-caret-position="519">
+          <caret line="1265" column="5" selection-start-line="1265" selection-start-column="5" selection-end-line="1265" selection-end-column="5" />
           <folding>
             <element signature="e#133#755#1" expanded="true" />
             <element signature="e#788#1410#1" expanded="true" />
             <marker date="1532302525138" expanded="true" signature="2301:2426" ph="..." />
             <marker date="1532302525138" expanded="true" signature="5933:6037" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="110" column="74" selection-start-line="110" selection-start-column="74" selection-end-line="110" selection-end-column="74" />
         </state>
       </provider>
     </entry>
