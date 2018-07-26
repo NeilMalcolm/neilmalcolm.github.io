@@ -495,14 +495,14 @@ img {
 	text-align: left;
 }
 
-.project-paragraph a
+.project-inner span a
 {
 	color: #0C8EED;
 	transition: 0.1s;
 	text-decoration: none;
 }
 
-.project-paragraph a:hover
+.project-inner span a:hover
 {
 	color: #1073ed;
 	transition: 0.2s;
@@ -515,7 +515,7 @@ img {
 	margin-top: 0;
 }
 
-.project-paragraph
+.project-inner > span, .project-inner p
 {
 	color: #92A4BA;
 	text-align: justify;
