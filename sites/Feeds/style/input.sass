@@ -1,0 +1,407 @@
+$header-bg-color: #272D31    
+$featured-bg-color: #ECF0F3
+$news-bg-color: #F3F5F7
+$feeds-bg-color: #272D31
+$feeds-alt-bg-color: #30363B
+$article-title-color: #272D31
+$article-date-color: #8d9ca7
+$article-desc-color: #708391
+$featured-article-hover-bg-color: #D5DDE3
+$feed-color: #FFFFFF
+
+$entry-color: #FFFFFF
+$entry-placeholder-color: #A6B5C0
+$entry-bg-color: #5C656C
+$entry-bg-color-alt-color: #1F2427
+$end-of-feed-bg-color: #D8DFE4
+$emphasis-color: #404B54
+
+$invalid: #E84B7A
+$primary: #3599F6
+
+// extendables
+
+%no-padding
+    padding: 0
+    margin: 0
+
+@mixin no-border-with-radius($radius)
+    border: 0
+    border-radius: $radius
+
+%no-border
+    @include no-border-with-radius(2px)
+
+// style rules
+
+html
+    color: $article-desc-color
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    background: $news-bg-color
+
+body
+    @extend %no-padding
+    background: $news-bg-color
+
+h2
+    font-weight: normal
+
+ul
+    @extend %no-padding
+    list-style: none
+
+#outer-container
+    display: flex
+    height: 100%
+    width: 100%
+
+header
+    background-color: $header-bg-color
+    display: flex
+    align-items: center
+    justify-content: space-between
+    position: fixed
+    top: 0
+    height: 40px
+    width: 100%
+    padding: 1em 0
+
+    img
+        height: 25px
+        margin-left: 2.5em
+
+    input   
+        margin-right: 1.5sem
+
+
+input
+    @extend %no-border
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+    // display: inline-block
+    font-size: 1em
+    color: $entry-color
+    padding: 0.75em 1em
+    background: $entry-bg-color
+    border: 0
+
+    ::placeholder
+        color:$entry-placeholder-color
+
+#feeds
+    margin-top: calc(40px + 2em)
+    position: fixed
+    height: 100%
+    color: $feed-color
+    background: $feeds-bg-color
+    max-width: 330px
+    min-width: 330px
+
+    #add-feed
+        padding: 1em 2.5em 2em 2.5em
+        background: $feeds-alt-bg-color
+
+    input
+        width:75%
+
+
+    #feed-list
+        margin-top: 1.33em
+
+    li
+        padding: 1.33em 2.5em
+
+        .feed-img
+            float: left
+            width: 20px
+            margin-right: 1em
+
+        .feed-name
+            display: block
+            word-break: keep-all
+            overflow: hidden
+            text-overflow: ellipsis
+        
+        &:hover
+            background: rgba(0, 0, 0, 0.1)
+            cursor: pointer
+            
+
+#news 
+    margin-left: calc(330px)
+    flex-grow: 1
+    background: $news-bg-color
+    height: 100%
+
+    h2
+        padding: 0 0 0 2em
+
+    ul
+        width: 100%
+
+        li
+            padding: 1em 2.5em 1em 2.5em 
+
+        li:not(:last-child)
+            margin-bottom: 1px
+
+
+.invalid
+    border: 1px solid $invalid !important
+    
+#invalid-notification
+    color: $invalid
+    padding: 0
+    margin: 0.33em 0 0 0
+    font-size: 0.8em
+
+h4
+    font-size: 1.5em
+    font-weight: normal
+    padding: 0
+    margin: 0 0 0.1em 0
+
+
+a
+    text-decoration: none
+
+.news-story
+    display: flex
+
+    img
+        min-width: 250px
+        width:30%
+        align-self: flex-start
+        margin-right: 1em
+
+    div
+        flex-grow: 1
+        vertical-align: top
+        width: 50%
+
+
+    span
+        font-size: 0.9em
+
+    p
+        font-size: 1.1em
+        text-align: justify
+
+#featured-articles
+    width: 100%
+    padding: 0 0 2.5em 0 
+    background: $featured-bg-color
+    text-align: center
+
+    > a:not(:last-child)
+        margin-right: 0.33em
+
+    h2
+        font-weight: normal
+        padding: 1em 0 0.33em 2em
+        text-align: left
+
+.featured-link
+    text-align: justify
+    position: relative
+
+.featured-article
+    display: inline-block
+    position: relative
+    z-index: 2
+    padding: 0.66em
+    width: 30%
+    min-height: 150px
+    vertical-align: top
+    overflow: hidden
+    transition: 0.2s
+
+    .news-head
+        font-size: 1.2em
+
+    img
+        display: block
+        opacity: 0.8
+        width: 100%
+
+    div
+        margin-top: 0.5em
+        display: block
+
+    &:after
+        display: block
+        position: absolute
+        content: ''
+        width:100%
+        height: 100%
+        background: $featured-article-hover-bg-color
+        opacity: 0
+        left: 0
+        top: 100%
+    
+    &:hover
+        transition: 0.5s
+        margin: -0.33em 0 0.33em 0
+
+        img
+            opacity: 1
+
+        &:after
+            opacity: 1
+            transform: translateY(-100%)
+            transition: 0.3s
+            z-index: -1
+
+.news-info
+    grid-column: 1
+    grid-column-end: 2
+
+
+.news-img
+    
+.news-head
+    color: $article-title-color
+
+.news-date
+    color: $article-date-color
+
+.news-summary
+    color: $article-desc-color
+    
+    em
+        color: $emphasis-color
+    
+
+#end-of-feed
+    color: #5D717F
+    text-align: center
+    margin: 1em 0 3em 0
+    padding: 0.3em
+    background-color: $end-of-feed-bg-color
+    border-radius: 5em
+
+#friendly-date
+    display: inline
+    opacify: 1
+    transition: 0.2s
+
+#short-date
+    display: none
+    opacify: 0
+    transition: 0.2s
+
+@media screen and (max-width: 1200px)
+    #friendly-date
+        display: none
+        opacify: 0
+
+    #short-date
+        display: inline
+        opacify: 1
+
+
+
+#new-feed-screen
+    position: absolute
+    width: 100%
+    height: calc(100% - (40px + 2em))
+    background: $header-bg-color
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    z-index: 1
+    margin-top: calc(40px + 2em)
+
+    input
+        background: $entry-bg-color-alt-color
+
+    div
+        
+
+    div > *
+        width: 100%
+
+#color-list
+
+    margin-top: -1em
+    padding-bottom: 1.5em
+
+    li
+        vertical-align: middle
+        display: inline-block
+
+    li:not(:last-child)
+        margin-right: 2em
+
+    #custom-color
+        background: $entry-bg-color-alt-color
+        padding: 1em
+        font-size: 1em
+
+    .color-button
+        width: 1.5em
+        height: 1.5em
+        border-radius: 2em
+        border: 3px solid transparent
+
+    #blue
+        background: #5BADE9
+
+    #pink
+        background: #E95B97
+
+    #red
+        background: #E95B5B
+
+    #yellow
+        background: #E9DB5B
+
+    #green
+        background: #5BE994
+
+    #orange
+        background: #E99F5B
+
+    .selected-color
+        border: 3px solid #ffffff
+
+
+button
+    @extend %no-border
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+    display: inline-block !important
+    font-size: 1em
+    display: flex
+    background: $primary
+    color: #FFFFFF
+    position: relative
+    overflow: hidden
+    width:25%
+    padding: 0.75em 0
+    transition: transform 0.2s
+
+    span
+        position: relative
+        z-index: 3
+
+    &:after
+        position: absolute
+        z-index: 2
+        top:0
+        content: ''
+        display: block
+        background: white  
+        height: 100%
+        width:130%
+        transform: skewX(20deg) translateX(-150%)
+        transition: transform 0.2s
+    
+    &:hover
+        color: $primary
+        transition: transform 0.2s
+
+    &:hover:after
+        transform: skewX(20deg) translateX(-15%)
+        transition: transform 0.2s ease-in
