@@ -16,6 +16,7 @@ html {
 
 body {
   background: #F3F5F7;
+  overflow: hidden;
 }
 
 h2 {
@@ -125,7 +126,6 @@ input ::placeholder {
   margin-left: calc(330px);
   flex-grow: 1;
   background: #F3F5F7;
-  height: 100%;
 }
 #news h2 {
   padding: 0 0 0 2em;
@@ -138,6 +138,11 @@ input ::placeholder {
 }
 #news ul li:not(:last-child) {
   margin-bottom: 1px;
+}
+
+.has-news {
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .invalid {
@@ -170,7 +175,7 @@ a {
   width: 30%;
   align-self: flex-start;
   margin-right: 1em;
-  background: red;
+  background: rgba(0, 0, 0, 0.05);
   transition: 0.2s;
 }
 .news-story div {
@@ -430,6 +435,16 @@ button:hover {
 button:hover:after {
   transform: skewX(20deg) translateX(-15%);
   transition: transform 0.2s ease-in;
+}
+
+img[lazy=loaded] {
+  transition: 0.5s;
+}
+
+img[lazy=loading] {
+  transition: 0.5s;
+  position: relative;
+  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -54,7 +54,7 @@
                     </li>
                 </ul>
             </section>
-            <section id="news">
+            <section id="news" :class="{ 'has-news' : displayFeedItems.length > 0 }">
                 <div id="featured-articles" v-if="featuredArticles.length > 0" >
                     <h2>Featured</h2>
                         <a class="featured-link" v-bind:href="entry.permaLink" v-for="entry in featuredArticles"><!--

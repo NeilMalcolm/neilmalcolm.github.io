@@ -42,6 +42,8 @@ html
 body
     @extend %no-padding
     background: $news-bg-color
+    overflow: hidden
+    
 
 h2
     font-weight: normal
@@ -150,7 +152,6 @@ input
     margin-left: calc(330px)
     flex-grow: 1
     background: $news-bg-color
-    height: 100%
 
     h2
         padding: 0 0 0 2em
@@ -164,6 +165,9 @@ input
         li:not(:last-child)
             margin-bottom: 1px
 
+.has-news
+    height: 100vh
+    overflow-y: auto
 
 .invalid
     border: 1px solid $invalid !important
@@ -192,7 +196,7 @@ a
         width:30%
         align-self: flex-start
         margin-right: 1em
-        background: red
+        background: rgba(0, 0, 0, 0.05)
         transition: 0.2s
 
     div
@@ -436,3 +440,11 @@ button
     &:hover:after
         transform: skewX(20deg) translateX(-15%)
         transition: transform 0.2s ease-in
+
+img[lazy="loaded"]
+    transition: 0.5s
+
+img[lazy="loading"]
+    transition: 0.5s
+    position: relative
+    height: 100%
