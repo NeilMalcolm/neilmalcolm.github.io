@@ -335,6 +335,7 @@ a {
   align-items: center;
   flex-direction: column;
   z-index: 10;
+  display: none;
 }
 #new-feed-screen input {
   background: #1F2427;

@@ -9,11 +9,9 @@ Vue.use(VueLazyload,
     attempt: 1
 });
 
-
-
-// { url: "http://feeds.skynews.com/feeds/rss/uk.xml" },
-// { url: "http://feeds.skynews.com/feeds/rss/technology.xml" },
-// { url: "http://feeds.skynews.com/feeds/rss/us.xml" }
+const skyUkurl = { url: "http://feeds.skynews.com/feeds/rss/uk.xml" };
+const skyTechurl = { url: "http://feeds.skynews.com/feeds/rss/technology.xml" };
+const skyUsurl = { url: "http://feeds.skynews.com/feeds/rss/us.xml" };
 
 var feedList = new Vue(
     {
