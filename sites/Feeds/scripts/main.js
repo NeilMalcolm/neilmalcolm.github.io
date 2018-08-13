@@ -234,9 +234,15 @@ var xmlWebAddressToObjects = function(theFeed)
                             createNewFeedItem(entry, theFeed)
                         );
                     }
-                    console.log("end:");
-                    console.log(tempList);
-                    resolve(tempList);
+                    console.log(feedList.displayFeeds);
+                    console.log(theFeed);
+
+                    let feedListContainsThisFeed = feedList.displayFeeds.includes(theFeed);
+                    console.log("does contain? " + feedListContainsThisFeed);
+                    if(feedListContainsThisFeed)
+                    {
+                        resolve(tempList);
+                    }
                 }, 500);
             });
     });
@@ -257,8 +263,6 @@ var createNewFeedItem = function(entry, theFeed)
         permaLink: entry.permalink,
         feed: theFeed
     };
-    console.log("entry is: ");
-    console.log(newEntry);
 
     if(entry.permalink === undefined)
     {
