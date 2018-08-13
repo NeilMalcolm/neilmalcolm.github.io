@@ -96,11 +96,6 @@ var feedList = new Vue(
                     .then(function(result)
                     {
                         feedList.displayFeedItems = feedList.displayFeedItems.concat(result);
-                        // for(var i = 0; i < result.length; i++)
-                        // {
-                        //     feedList.displayFeedItems.push(result[i]);
-                        // }
-                        
                     });
                 }
                 else
@@ -133,25 +128,29 @@ var feedList = new Vue(
 
             addFeed: function()
             {
-                let newFeedScreen = document.getElementById("new-feed-screen");
-                newFeedScreen.style.display = "flex";
-                // let feedInput = document.getElementById("feed-input");
-                // let regex = new RegExp(expression);
-                // let feed = feedInput.value;
+                if(feedList.selectedColor !== "" && feedList.selectedColor !== null)
+                {
+                    document.getElementById(feedList.selectedColor).classList.remove("selected-color");
+                }
+                feedList.selectedColor = "blue";
+                document.getElementById("blue").classList.add("selected-color");
 
-                // if(feed.match(regex))
-                // {
-                //     console.log("matches");
-                //     this.invalidFeed = false
-                //     feedList.feeds.push({ url: feed });
-                //     xmlWebAddressToObjects(feed);
-                //     feedInput.value = "";
-                // }
-                // else
-                // {
-                //     console.log("feed don't match url");
-                //     this.invalidFeed = true;
-                // }
+                let newFeedScreen = document.getElementById("new-feed-screen");
+                let search = document.getElementById("search");
+                let closeNewFeed = document.getElementById("close-new-feed");
+                search.style.display = "none";
+                newFeedScreen.style.display = "flex";
+                closeNewFeed.style.display = "block";
+            },
+
+            closeNewFeedScreen: function()
+            {
+                let newFeedScreen = document.getElementById("new-feed-screen");
+                let closeNewFeed = document.getElementById("close-new-feed");
+                let search = document.getElementById("search");
+                newFeedScreen.style.display = "none";
+                closeNewFeed.style.display = "none";
+                search.style.display = "block";
             },
 
             feedInputChanged: function()
@@ -313,4 +312,12 @@ var convertDateFormat = function(date)
     {
         return "";
     }
+}
+
+var writeCookie = function()
+{
+    var feeds = feedList.feeds;
+
+    var jsonFeeds = JSON.stringify(feeds);
+    console.log(jsonFeeds);
 }

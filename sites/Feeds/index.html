@@ -1,4 +1,4 @@
-<!doctype <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -17,6 +17,7 @@
         <header>
             <img src="./assets/header-logo.svg"/>
             <input id="search" placeholder="Search"/>
+            <button id="close-new-feed" class="circle-button" @click="closeNewFeedScreen">x</button>
         </header>
         <section id="new-feed-screen">
             <div>
@@ -30,7 +31,7 @@
                     <li v-for="color in colors" v-bind:id="color" v-bind:class="color" class="color-button" @click="selectColor(color, $event)"></li>
                     <li id="custom-color" @click="selectCustomColor">custom color</li>
                 </ul>
-                <button id="add-new-feed-button" @click="addNewFeed"><span>Add new Feed</span></button>
+                <button id="add-new-feed-button" class="fill-button" @click="addNewFeed"><span>Add new Feed</span></button>
             </div>
         </section>
         <div id="outer-container">
@@ -39,7 +40,7 @@
                     <h2>Feeds</h2>
                     <div>
                         <!-- <input id="feed-input" v-bind:class="{ invalid: invalidFeed }" placeholder="Enter Feed URL" @input="feedInputChanged" @keyup.enter="addFeed" /> -->
-                        <button @click="addFeed"><span>Add</span></button>
+                        <button class="fill-button" @click="addFeed"><span>Add</span></button>
                     </div>
                 </section>
                 <p id="invalid-notification" v-if="invalidFeed">Invalid Feed Url</p>

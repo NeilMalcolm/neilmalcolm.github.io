@@ -76,7 +76,6 @@ header
     input   
         margin-right: 1.5sem
 
-
 input
     @extend %no-border
     border-top-right-radius: 0
@@ -405,7 +404,7 @@ a
     border: 3px solid #ffffff
     transition: 0.3s
 
-button
+.fill-button
     @extend %no-border
     display: inline-block !important
     font-size: 1em
@@ -449,3 +448,27 @@ img[lazy="loading"]
     transition: 0.5s
     position: relative
     height: 100%
+
+
+#close-new-feed
+        display: none
+
+.circle-button 
+    @extend %no-border
+    outline: none
+    width: 3em
+    height: 3em
+    border-radius: 2em
+    font-size: 1em
+    color: #ffffff
+    background-color: rgba(0, 0, 0, 0.2)
+    transition: 0.1s
+
+    &:hover
+        background: rgba(0, 0, 0, 0.5)
+        transition: 0.2s
+
+header
+    .circle-button
+        margin-right: 1em
+    
