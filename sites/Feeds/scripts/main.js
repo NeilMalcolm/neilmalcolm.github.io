@@ -113,14 +113,17 @@ var feedList = new Vue(
                 
                 newFeedScreen.style.display = "none";
 
-                this.feeds.push(
-                    {
-                        Name: newFeedName,
-                        Url: newFeedUrl,
-                        Color: this.selectedColor,
-                        isSelected: false
-                    }
-                );
+                let newFeed = 
+                {
+                    _id: new Date().toISOString(),
+                    Name: newFeedName,
+                    Url: newFeedUrl,
+                    Color: this.selectedColor,
+                    isSelected: false
+                };
+
+                this.feeds.push(newFeed);
+                writeToDb(newFeed)
 
                 document.getElementById("feed-url-input").value = "";
                 document.getElementById("feed-name-input").value = "";
@@ -318,10 +321,30 @@ var convertDateFormat = function(date)
     }
 }
 
-var writeCookie = function()
-{
-    var feeds = feedList.feeds;
 
-    var jsonFeeds = JSON.stringify(feeds);
-    console.log(jsonFeeds);
+var writeToDb = function(item)
+{
+    console.log("write to db");
+    db.put(item, function callback(err, result)
+    {
+        if(!err)
+            console.log("Successfully put item");
+        else
+            console.log("ERROR: " + err);
+    });
 }
+
+var getFeedsFromDb = function()
+{
+    db.allDocs({include_docs: true, descending: false}).then(function(result)
+    {
+        console.log(result.rows);
+        var feeds = result.rows.map(a => a.doc);
+        feedList.feeds = feeds;
+    });
+}
+
+var db = new PouchDB('FeedDb');
+
+
+getFeedsFromDb();
