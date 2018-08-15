@@ -40,6 +40,44 @@ var feedList = new Vue(
             newsIndex: 5
         },
         methods: {
+            deleteFeed: function(theFeed, event)
+            {
+                console.log("DO DELETE");
+                console.log(JSON.stringify(theFeed));
+                
+                // See if the feed exists in our feeds array
+                var feedsIndex = this.feeds.indexOf(theFeed);
+                console.log(feedsIndex);
+                if(feedsIndex !== -1)
+                {
+                    // if the feed exists, try to delete from db
+                    deleteFromDb(theFeed).then(function(result)
+                    {
+                        // if result is false, we don't want to remove anything from anything
+                        if(!result) return;
+                        feedList.feeds.splice(feedsIndex, 1);
+                        // only if our feed we wish to delete is being 
+                        // displayed do we want to remove it
+
+                        // remove from displayFeeds
+                        let displayFeedIndex = this.displayFeeds.indexOf(theFeed);
+                        if(displayFeedIndex !== -1)
+                        {
+                            this.displayFeeds.splice(displayFeedIndex, 1);
+
+                            // remove all elements from displayFeedItems which
+                            // belong to the removed feed
+                            this.displayFeedItems.filter(e => e.feed !== theFeed);
+                        }
+
+                    }).catch(function(result)
+                    {
+                        console.log("failed to delete big time");
+                    });
+                }
+            
+            },
+
             clearFeed: function(theFeed)
             {
                 console.log("remove");
@@ -72,6 +110,14 @@ var feedList = new Vue(
             selectFeed: function(theFeed, event)
             {
                 let target = event.currentTarget;
+                console.log(event.target);
+                if(event.target.classList.contains("feed-delete"))
+                {
+                    console.log("FEED DELETE");
+                    this.deleteFeed(theFeed, event);
+                    return;
+                }
+                console.log("do select feed");
                 if(this.displayFeeds.includes(theFeed))
                 {
                     // if the selected feed is already selected
@@ -210,7 +256,6 @@ var xmlWebAddressToObjects = function(theFeed)
 
     return new Promise(function(resolve, reject)
     {
-        console.log("start: " + theFeed.Url);
         let tempList = [];
         feednami.load(address)
             .then(feed => 
@@ -228,7 +273,6 @@ var xmlWebAddressToObjects = function(theFeed)
                             );
             
                             feed.entries.splice(i, 1);
-                            console.log("featuredArticles is greater than 0: " + feedList.featuredArticles.length);
                         }
                     }
                     for(let entry of feed.entries)
@@ -237,11 +281,8 @@ var xmlWebAddressToObjects = function(theFeed)
                             createNewFeedItem(entry, theFeed)
                         );
                     }
-                    console.log(feedList.displayFeeds);
-                    console.log(theFeed);
 
                     let feedListContainsThisFeed = feedList.displayFeeds.includes(theFeed);
-                    console.log("does contain? " + feedListContainsThisFeed);
                     if(feedListContainsThisFeed)
                     {
                         resolve(tempList);
@@ -331,6 +372,23 @@ var writeToDb = function(item)
             console.log("Successfully put item");
         else
             console.log("ERROR: " + err);
+    });
+}
+
+var deleteFromDb = function(item)
+{
+    return new Promise(function(resolve, reject)
+    { 
+        console.log('delete: ' + item._id);
+        db.get(item._id)
+        .then(function (doc) {
+            db.remove(doc);
+            resolve(true);
+        }).catch(function (err) {
+            console.log("failed to delete");
+            console.log(err);
+            reject(false);
+        });
     });
 }
 

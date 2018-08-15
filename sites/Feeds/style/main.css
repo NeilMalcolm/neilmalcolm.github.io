@@ -109,9 +109,19 @@ input ::placeholder {
   max-width: calc(100% - 20px - 2em);
   display: inline-block;
 }
+#feeds li button {
+  opacity: 0;
+  transition: 0.2s;
+  right: 0;
+}
 #feeds li:hover {
   background: rgba(0, 0, 0, 0.1);
   cursor: pointer;
+}
+#feeds li:hover button {
+  transition: 0.2s;
+  opacity: 1;
+  transition-delay: 0.3s;
 }
 #feeds .selected-feed {
   border-left: 10px inset #3599F6;

@@ -50,7 +50,9 @@
                 <ul id="feed-list">
                     <li v-for="feed in feeds" @click="selectFeed(feed, $event)">
                         <div class="feed">
-                            <img v-bind:class="feed.Color" class="feed-img" src="./assets/feed.svg"/><div class="feed-name"><span>{{feed.Name}}</span></div>
+                            <img v-bind:class="feed.Color" class="feed-img" src="./assets/feed.svg"/>
+                            <div class="feed-name"><span>{{feed.Name}}</span></div>
+                            <button class="feed-delete">x</button>
                         </div>
                     </li>
                 </ul>
