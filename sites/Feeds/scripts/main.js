@@ -55,24 +55,35 @@ var feedList = new Vue(
                     {
                         // if result is false, we don't want to remove anything from anything
                         if(!result) return;
-                        feedList.feeds.splice(feedsIndex, 1);
                         // only if our feed we wish to delete is being 
                         // displayed do we want to remove it
 
                         // remove from displayFeeds
-                        let displayFeedIndex = this.displayFeeds.indexOf(theFeed);
+                        let displayFeedIndex = feedList.displayFeeds.indexOf(theFeed);
                         if(displayFeedIndex !== -1)
                         {
-                            this.displayFeeds.splice(displayFeedIndex, 1);
+                            console.log("delete displayfeeds");
+                            feedList.displayFeeds.splice(displayFeedIndex, 1);
 
                             // remove all elements from displayFeedItems which
                             // belong to the removed feed
-                            this.displayFeedItems.filter(e => e.feed !== theFeed);
+                            feedList.displayFeedItems = feedList.displayFeedItems.filter(e => e.feed !== theFeed);
                         }
+                        let feedUl = document.getElementById("feed-list");
+                        let feedLiToDelete = feedUl.childNodes[feedsIndex];
+                        feedLiToDelete.classList.add("deleted-feed");
+                        window.setTimeout(function(){
+                            // console.log("has been deleted");
+                            // feedLiToDelete.remove();
+                            // theFeed.showFeed = false;
+                            // feedList.feeds.splice(feedsIndex, 1);
+                            // feedLiToDelete.classList.remove("deleted-feed");
+                        }, 1000);
 
                     }).catch(function(result)
                     {
                         console.log("failed to delete big time");
+                        console.log(result);
                     });
                 }
             
@@ -110,6 +121,10 @@ var feedList = new Vue(
             selectFeed: function(theFeed, event)
             {
                 let target = event.currentTarget;
+                if(target.classList.contains("deleted-feed"))
+                {
+                    return;
+                }
                 console.log(event.target);
                 if(event.target.classList.contains("feed-delete"))
                 {
@@ -147,6 +162,7 @@ var feedList = new Vue(
                 else
                 {
                     console.log("feed don't match url");
+                    target.classList.remove("selected-feed");
                     this.invalidFeed = true;
                 }
             },
@@ -165,7 +181,8 @@ var feedList = new Vue(
                     Name: newFeedName,
                     Url: newFeedUrl,
                     Color: this.selectedColor,
-                    isSelected: false
+                    isSelected: false,
+                    showFeed: true
                 };
 
                 this.feeds.push(newFeed);
@@ -382,12 +399,13 @@ var deleteFromDb = function(item)
         console.log('delete: ' + item._id);
         db.get(item._id)
         .then(function (doc) {
+            console.log("delete it");
             db.remove(doc);
             resolve(true);
         }).catch(function (err) {
             console.log("failed to delete");
             console.log(err);
-            reject(false);
+            reject(err);
         });
     });
 }
@@ -397,7 +415,7 @@ var getFeedsFromDb = function()
     db.allDocs({include_docs: true, descending: false}).then(function(result)
     {
         console.log(result.rows);
-        var feeds = result.rows.map(a => a.doc);
+        var feeds = result.rows.map(a => a.doc)
         feedList.feeds = feeds;
     });
 }
