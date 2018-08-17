@@ -121,7 +121,8 @@ input ::placeholder {
   border: none;
   outline: none;
   font-size: 1em;
-  padding: 0.75em;
+  width: 2em;
+  height: 2em;
 }
 #feeds li button:hover {
   background: rgba(0, 0, 0, 0.2);

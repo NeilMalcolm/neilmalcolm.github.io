@@ -69,8 +69,7 @@ var feedList = new Vue(
                             // belong to the removed feed
                             feedList.displayFeedItems = feedList.displayFeedItems.filter(e => e.feed !== theFeed);
                         }
-                        let feedUl = document.getElementById("feed-list");
-                        let feedLiToDelete = feedUl.childNodes[feedsIndex];
+                        let feedLiToDelete = event.target.parentNode.parentNode;
                         feedLiToDelete.classList.add("deleted-feed");
                         window.setTimeout(function(){
                             // console.log("has been deleted");
@@ -172,8 +171,7 @@ var feedList = new Vue(
                 let newFeedUrl = document.getElementById("feed-url-input").value;
                 let newFeedName = document.getElementById("feed-name-input").value;
 
-                
-                newFeedScreen.style.display = "none";
+                hideFeedScreen();
 
                 let newFeed = 
                 {
@@ -211,12 +209,7 @@ var feedList = new Vue(
 
             closeNewFeedScreen: function()
             {
-                let newFeedScreen = document.getElementById("new-feed-screen");
-                let closeNewFeed = document.getElementById("close-new-feed");
-                let search = document.getElementById("search");
-                newFeedScreen.style.display = "none";
-                closeNewFeed.style.display = "none";
-                search.style.display = "block";
+                hideFeedScreen();
             },
 
             feedInputChanged: function()
@@ -379,6 +372,15 @@ var convertDateFormat = function(date)
     }
 }
 
+var hideFeedScreen = function()
+{
+    let newFeedScreen = document.getElementById("new-feed-screen");
+    let closeNewFeed = document.getElementById("close-new-feed");
+    let search = document.getElementById("search");
+    newFeedScreen.style.display = "none";
+    closeNewFeed.style.display = "none";
+    search.style.display = "block";
+}
 
 var writeToDb = function(item)
 {
