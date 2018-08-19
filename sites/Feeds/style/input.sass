@@ -74,7 +74,7 @@ header
         margin-left: 2.5em
 
     input   
-        margin-right: 1.5sem
+        margin-right: 1.5em
 
 input
     @extend %no-border
@@ -91,12 +91,14 @@ input
         color:$entry-placeholder-color
 
 #feeds
-    position: fixed
-    height: 100%
+    display: flex
+    flex-direction: column
+    height: calc(100vh - 40px - 2em)
     color: $feed-color
     background: $feeds-bg-color
     max-width: 330px
     min-width: 330px
+
 
     #add-feed
         padding: 1em 2.5em 2em 2.5em
@@ -108,6 +110,7 @@ input
 
     #feed-list
         margin-top: 1.33em
+        flex-grow: 1
 
     li
         padding: 1.33em 2.5em
@@ -118,6 +121,7 @@ input
         max-height: 200px
 
         .feed
+            position: relative
             overflow: hidden
             vertical-align: middle
             text-overflow: ellipsis
@@ -140,7 +144,7 @@ input
             opacity: 0
             transition: 0.2s
             position: absolute
-            right: 2.5em
+            right: 0
             color: rgba(255,255,255, 0.7)
             background: transparent
             border-radius: 5em
@@ -164,7 +168,7 @@ input
                 transition-delay: 0.2s
             
     .selected-feed
-        border-left: 10px inset $primary
+        border-left: 10px inset
         background: rgba(0, 0, 0, 0.1)
         transition: 0.2s border-left, 0.2s background
 
@@ -189,8 +193,36 @@ input
             display: none
             opacity: 0
 
+    .extra-buttons
+        padding: 0 2.5em 1.5em 2.5em
+
+        button
+            color: rgba(255, 255, 255, 0.4)
+            font-size: 1.25em
+            outline: none
+            border: none
+            display: inline-block
+            position: relative
+            width: 49%
+            padding: 1em
+            background: transparent
+
+            &:hover
+                color: white
+                background: rgba(0, 0, 0, 0.2)
+                transition: 0.2s
+
+#feeds-lower-container
+    display: flex
+    flex-direction: column
+
+    ul
+        flex: 1
+
+    div 
+        justify-self: flex-end
+
 #news 
-    margin-left: calc(330px)
     flex-grow: 1
     background: $news-bg-color
 
@@ -207,7 +239,7 @@ input
             margin-bottom: 1px
 
 .has-news
-    height: 100vh
+    height: calc(100vh - 40px - 2em)
     overflow-y: auto
 
 .invalid
@@ -379,7 +411,7 @@ a
 
 
 
-#new-feed-screen
+#new-feed-screen, #settings
     position: absolute
     width: 100%
     height: calc(100% - (40px + 2em))
@@ -389,7 +421,8 @@ a
     align-items: center
     flex-direction: column
     z-index: 10
-    display: none
+
+#new-feed-screen
 
     input
         background: $entry-bg-color-alt-color
@@ -513,4 +546,3 @@ img[lazy="loading"]
 header
     .circle-button
         margin-right: 1em
-    

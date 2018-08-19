@@ -37,9 +37,23 @@ var feedList = new Vue(
             feedsCounter: 0,
             newFeed: '',
             selectedColor: '',
-            newsIndex: 5
+            newsIndex: 5,
+            showNewFeed: false,
+            showSettings: false
         },
         methods: {
+            toggleSettings: function()
+            {
+                this.showSettings = !this.showSettings;
+                if(this.showSettings)
+                {
+                    document.getElementById("search").style.display = "none";
+                }
+                else
+                {
+                    document.getElementById("search").style.display = "block";
+                }
+            },
             deleteFeed: function(theFeed, event)
             {
                 console.log("DO DELETE");
@@ -71,13 +85,6 @@ var feedList = new Vue(
                         }
                         let feedLiToDelete = event.target.parentNode.parentNode;
                         feedLiToDelete.classList.add("deleted-feed");
-                        window.setTimeout(function(){
-                            // console.log("has been deleted");
-                            // feedLiToDelete.remove();
-                            // theFeed.showFeed = false;
-                            // feedList.feeds.splice(feedsIndex, 1);
-                            // feedLiToDelete.classList.remove("deleted-feed");
-                        }, 1000);
 
                     }).catch(function(result)
                     {
@@ -155,7 +162,14 @@ var feedList = new Vue(
                     xmlWebAddressToObjects(theFeed)
                     .then(function(result)
                     {
-                        feedList.displayFeedItems = feedList.displayFeedItems.concat(result);
+                        let news = result[0];
+                        let featured = result[1];
+                        feedList.displayFeedItems = feedList.displayFeedItems.concat(news);
+
+                        if(featured.length > 0)
+                        {
+                            feedList.featuredArticles = feedList.featuredArticles.concat(featured);
+                        }
                     });
                 }
                 else
@@ -199,11 +213,11 @@ var feedList = new Vue(
                 feedList.selectedColor = "blue";
                 document.getElementById("blue").classList.add("selected-color");
 
-                let newFeedScreen = document.getElementById("new-feed-screen");
+                this.showNewFeed = true;
                 let search = document.getElementById("search");
                 let closeNewFeed = document.getElementById("close-new-feed");
                 search.style.display = "none";
-                newFeedScreen.style.display = "flex";
+                
                 closeNewFeed.style.display = "block";
             },
 
@@ -267,6 +281,7 @@ var xmlWebAddressToObjects = function(theFeed)
     return new Promise(function(resolve, reject)
     {
         let tempList = [];
+        let featured = [];
         feednami.load(address)
             .then(feed => 
             {
@@ -277,7 +292,7 @@ var xmlWebAddressToObjects = function(theFeed)
                         // get first 3 articles and add to 'featured' articles
                         for(let i = 0; i < 3; i++)
                         {
-                            feedList.featuredArticles.push
+                            featured.push
                             (
                                 createNewFeedItem(feed.entries[i], theFeed)
                             );
@@ -295,7 +310,7 @@ var xmlWebAddressToObjects = function(theFeed)
                     let feedListContainsThisFeed = feedList.displayFeeds.includes(theFeed);
                     if(feedListContainsThisFeed)
                     {
-                        resolve(tempList);
+                        resolve([tempList, featured]);
                     }
                 }, 500);
             });
@@ -374,10 +389,9 @@ var convertDateFormat = function(date)
 
 var hideFeedScreen = function()
 {
-    let newFeedScreen = document.getElementById("new-feed-screen");
+    feedList.showNewFeed = false;
     let closeNewFeed = document.getElementById("close-new-feed");
     let search = document.getElementById("search");
-    newFeedScreen.style.display = "none";
     closeNewFeed.style.display = "none";
     search.style.display = "block";
 }
