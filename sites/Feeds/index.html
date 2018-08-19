@@ -38,12 +38,16 @@
         </section>
         <section id="settings" v-show="showSettings">
             <h2>Settings</h2>
-
+            <!-- <ul id="settings-list">
+                <li class="setting">
+                    <p>Delete all feeds</p>
+                </li>
+            </ul> -->
         </section>
         <div id="outer-container">
             <section id="feeds">
                 <section id="add-feed">
-                    <h2>Feeds</h2>
+                    <h2>Feeds <span>{{feeds.length}}</span></h2>
                     <div>
                         <!-- <input id="feed-input" v-bind:class="{ invalid: invalidFeed }" placeholder="Enter Feed URL" @input="feedInputChanged" @keyup.enter="addFeed" /> -->
                         <button class="fill-button" @click="addFeed" alt="Add feed button"><span>Add</span></button>
