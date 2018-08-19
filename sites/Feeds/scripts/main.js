@@ -85,7 +85,11 @@ var feedList = new Vue(
                         }
                         let feedLiToDelete = event.target.parentNode.parentNode;
                         feedLiToDelete.classList.add("deleted-feed");
-
+                        window.setTimeout(function(){
+                            feedLiToDelete.classList.remove("deleted-feed");
+                            feedList.feeds = remove(feedList.feeds, theFeed);
+                        }, 1000);
+                        
                     }).catch(function(result)
                     {
                         console.log("failed to delete big time");
@@ -267,6 +271,11 @@ var feedList = new Vue(
         }
     }
 );
+
+var remove = function(array, element)
+{
+    return array.filter(x => x !== element);
+};
 
 var clearNewsForFeed = function(theFeed)
 {
