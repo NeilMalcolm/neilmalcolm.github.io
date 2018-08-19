@@ -46,7 +46,7 @@
                     <h2>Feeds</h2>
                     <div>
                         <!-- <input id="feed-input" v-bind:class="{ invalid: invalidFeed }" placeholder="Enter Feed URL" @input="feedInputChanged" @keyup.enter="addFeed" /> -->
-                        <button class="fill-button" @click="addFeed"><span>Add</span></button>
+                        <button class="fill-button" @click="addFeed" alt="Add feed button"><span>Add</span></button>
                     </div>
                 </section>
                 <p id="invalid-notification" v-if="invalidFeed">Invalid Feed Url</p>
@@ -58,14 +58,14 @@
                         <div class="feed">
                             <img v-bind:class="feed.Color" class="feed-img" src="./assets/feed.svg"/>
                             <div class="feed-name"><span>{{feed.Name}}</span></div>
-                            <button class="feed-delete">x</button>
+                            <button class="feed-delete" alt="Delete feed button">x</button>
                         </div>
                     </li>
                 </ul>
                 <div class="extra-buttons">
                         <!--  -->
                         <!-- @click="showInfo" -->
-                    <button id="show-settings-button" @click="toggleSettings"><i class="fas fa-cog"></i></button><button id="info-button" ><i class="fas fa-info-circle"></i></button>
+                    <button id="show-settings-button" @click="toggleSettings" alt="Settings button" title="Settings"><i class="fas fa-cog"></i></button><button id="info-button" alt="About button" title="About"><i class="fas fa-info-circle"></i></button>
                 </div>
             </section>
             <section id="news" :class="{ 'has-news' : displayFeedItems.length > 0 }">
@@ -92,7 +92,7 @@
                             <span class="news-date">{{entry.friendlyDate}}</span>
                             <span class="news-feed-name" v-bind:class="entry.feed.Color">{{entry.feed.Name}}</span>
                             <p class="news-summary" v-html="entry.summary"></p>
-                            <a class="news-link" v-bind:href="entry.permaLink">Go to article</a>
+                            <a class="news-link" alt="entry.title" v-bind:title="entry.title" v-bind:href="entry.permaLink">Go to article</a>
                         </div>
                     </li>
                 </ul>
