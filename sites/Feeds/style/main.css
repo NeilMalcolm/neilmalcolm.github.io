@@ -87,6 +87,7 @@ input ::placeholder {
   user-select: none;
   -moz-user-select: none;
   position: absolute;
+  font-size: 0.8em;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
