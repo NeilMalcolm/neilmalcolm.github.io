@@ -10,7 +10,7 @@ ul, body {
 
 html {
   color: #708391;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Open Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background: #F3F5F7;
 }
 
@@ -20,6 +20,8 @@ body {
 }
 
 h2 {
+  font-size: 1.3em;
+  font-family: "Hind", sans-serif;
   font-weight: normal;
 }
 
@@ -95,8 +97,8 @@ input ::placeholder {
   display: inline-block;
   background: rgba(255, 255, 255, 0.4);
   color: #30363B;
-  min-width: 1.2em;
-  min-height: 1.2em;
+  width: 1.5em;
+  height: 1.5em;
   border-radius: 1em;
 }
 #feeds input {
@@ -246,6 +248,7 @@ input ::placeholder {
 
 h4 {
   font-size: 1.5em;
+  font-family: "Hind", sans-serif;
   font-weight: normal;
   padding: 0;
   margin: 0 0 0.1em 0;
@@ -425,14 +428,15 @@ a {
   z-index: 10;
 }
 
-#new-feed-screen input {
-  background: #1F2427;
-}
 #new-feed-screen div {
   margin-top: calc(-40px - 2em);
 }
 #new-feed-screen div > * {
   width: 100%;
+}
+#new-feed-screen input {
+  background: #1F2427;
+  box-sizing: border-box;
 }
 
 #color-list {
@@ -454,10 +458,12 @@ a {
 }
 
 .color-button {
-  width: 1.5em;
-  height: 1.5em;
+  width: 2em;
+  height: 2em;
   border-radius: 2em;
-  border: 3px solid transparent;
+  border: 0;
+  box-sizing: border-box;
+  transition: 0.2s;
 }
 
 .blue {
@@ -485,7 +491,7 @@ a {
 }
 
 .selected-color {
-  border: 3px solid #ffffff;
+  border: 4px solid #ffffff;
   transition: 0.3s;
 }
 
@@ -557,6 +563,23 @@ img[lazy=loading] {
 
 header .circle-button {
   margin-right: 1em;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#new-feed-screen, #settings {
+  animation-name: show;
+  animation-duration: 0.2s;
+}
+#new-feed-screen .inner, #settings .inner {
+  animation-name: show;
+  animation-duration: 1s;
 }
 
 /*# sourceMappingURL=main.css.map */
