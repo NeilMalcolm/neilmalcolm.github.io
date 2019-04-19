@@ -300,10 +300,15 @@ window.onload = function()
 
         isAnimatedScroll = false;
     }
-
     // methods to be called onLoad
 
     checkForBarSize();
 
     // document.getElementById("projects").classList.remove("off-screen");
 };
+
+
+
+function submitForm() {
+    document.getElementById("submit-form-button").click();
+}

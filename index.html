@@ -188,14 +188,17 @@
             </section>
 			<section id="contact" class="page-section">
                 <div id="contact-inner">
-                    <form>
-                        <h3>Contact</h3>
-                        <span>Name</span>
-                        <input class="entry" type="text" name="name" placeholder="John Smith">
-                        <span>Email</span>
-                        <input class="entry" type="text" name="email" placeholder="j.smith@example.com">
-                    </form>
-                    <a href="#" id="send" class="sticky-bar-alt-link blue-button project-button"><span class="inner">Send</span></a>
+                        <h3>Contact Me</h3>
+                        <form action="https://formspree.io/neilmalcolmcouk@gmail.com" method="POST">
+                            <span>Name</span>
+                            <input class="entry" type="text" name="name" placeholder="John">
+                            <span>Email</span>
+                            <input class="entry" type="email" name="_replyto" placeholder="you@example.com">
+                            <span>Message</span>
+                            <textarea class="entry" name="Message" placeholder="Type your message here" style="height: 175px; max-height: 300px; resize:vertical;"></textarea>
+                            <input id="submit-form-button" style="display: none" type="submit" value="Send">
+                          </form>
+                    <button id="send" class="sticky-bar-alt-link blue-button project-button" onclick="submitForm()"><span class="inner">Send</span></button>
                 </div>
             </section>
 		</div>
