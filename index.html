@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
 	<title>Neil's Site</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="style/style.css">
@@ -10,7 +10,6 @@
 <body>
 	<div id="outer-container">
 		<header id="sticky-bar">
-			<!--<img class="profile-img" src="./img/profile.jpg">-->
             <i id="hamburger-menu" class="fas fa-bars"></i>
 
             <div class="name-and-title">
@@ -44,7 +43,10 @@
 
 			<section id="about" class="page-section">
                 <div id="about-inner">
-                    <img class="profile-img large" src="./img/profile.jpg">
+                    <img class="profile-img large" src="./img/profile.jpg" 
+                    alt="A picture of neil himself." 
+                    title="A picture of neil himself."
+                    aria-title="A picture of neil himself.">
                     <div id="about-inner-right">
                         <h2>Neil Malcolm</h2>
                         <p>I am a software developer from Scotland, working with Xamarin.Forms daily!</p>
@@ -60,8 +62,14 @@
 				<section id="forms-alarm-app" class="project">
 					<div class="project-container">
                         <div class="project-img-container">
-                            <img class="project-img" src="./img/alarm-iphone.png">
-                            <img class="project-img" src="./img/alarm-android.png">
+                            <img class="project-img" src="./img/alarm-iphone.png"
+                                    alt="A mock-up of the alarm app running on an iPhone X." 
+                                    title="A mock-up of the alarm app running on an iPhone X."
+                                    aria-title="A mock-up of the alarm app running on an iPhone X.">
+                            <img class="project-img" src="./img/alarm-android.png"
+                                    alt="A mock-up of the alarm app running on an Google Pixel." 
+                                    title="A mock-up of the alarm app running on an Google Pixel."
+                                    aria-title="A mock-up of the alarm app running on an Google Pixel.">
                         </div>
                         <div class="project-inner">
                             <h3>Xamarin.Forms Alarm App</h3>
@@ -96,15 +104,24 @@
                             </ul>
                         </div>
                         <div class="project-img-container">
-                            <img class="project-img" src="./img/android-app-1.png">
-                            <img class="project-img" src="./img/android-app-2.png">
+                            <img class="project-img" src="./img/android-app-1.png"
+                                    alt="A mock-up of the app's RSS news feed list page on an android phone." 
+                                    title="A mock-up of the app's RSS news feed list page on an android phone." 
+                                    aria-title="A mock-up of the app's RSS news feed list page on an android phone.">
+                            <img class="project-img" src="./img/android-app-2.png"
+                                    alt="A mock-up of the app's RSS news feed on an android phone." 
+                                    title="A mock-up of the app's RSS news feed on an android phone." 
+                                    aria-title="A mock-up of the app's RSS news feed on an android phone.">
                         </div>
                     </div>
 			    </section>
                 <section id="imgrabber" class="project">
                     <div class="project-container">
                         <div class="project-img-container">
-                            <img class="project-img single-img" src="https://via.placeholder.com/420x200">
+                            <img class="project-img single-img" src="https://via.placeholder.com/420x200"
+                                    alt="A placeholder image, how lame." 
+                                    title="A placeholder image, how lame." 
+                                    aria-title="A placeholder image, how lame.">
                         </div>
                         <div class="project-inner">
                             <h3>Imgrabber Chrome Extension</h3>
@@ -140,7 +157,10 @@
                             </div>
                         </div>
                         <div class="project-img-container">
-                            <img class="project-img single-img" src="./img/hammerstone-small.png">
+                            <img class="project-img single-img" src="./img/hammerstone-small.png"
+                                    alt="Mock-up of the Hammerstone site displayed on a laptop screen." 
+                                    title="Mock-up of the Hammerstone site displayed on a laptop screen."
+                                    aria-title="Mock-up of the Hammerstone site displayed on a laptop screen.">
                         </div>
                     </div>
                 </section>
@@ -148,7 +168,10 @@
                 <section id="hetlax" class="project">
                     <div class="project-container">
                         <div class="project-img-container">
-                            <img class="project-img single-img" src="./img/hetlax-small.png">
+                            <img class="project-img single-img" src="./img/hetlax-small.png"
+                                    alt="Mock-up of the HetLax site displayed on a laptop screen." 
+                                    title="Mock-up of the hetlax site displayed on a laptop screen."
+                                    aria-title="Mock-up of the HetLax site displayed on a laptop screen.">
                         </div>
                         <div class="project-inner">
                             <h3>HetLax Landing Page</h3>
@@ -181,7 +204,10 @@
                             </div>
                         </div>
                         <div class="project-img-container">
-                            <img class="project-img single-img" src="./img/windows98-small.png">
+                            <img class="project-img single-img" src="./img/windows98-small.png" 
+                                    alt="Mock-up of the Windows 98 site displayed on a laptop screen." 
+                                    title="Mock-up of the Windows 98 site displayed on a laptop screen."
+                                    aria-title="Mock-up of the Windows 98 site displayed on a laptop screen.">
                         </div>
                     </div>
                 </section>
@@ -190,14 +216,14 @@
                 <div id="contact-inner">
                         <h3>Contact Me</h3>
                         <form action="https://formspree.io/neilmalcolmcouk@gmail.com" method="POST">
-                            <span>Name</span>
-                            <input class="entry" type="text" name="name" placeholder="John">
-                            <span>Email</span>
-                            <input class="entry" type="email" name="_replyto" placeholder="you@example.com">
-                            <span>Message</span>
-                            <textarea class="entry" name="Message" placeholder="Type your message here" style="height: 175px; max-height: 300px; resize:vertical;"></textarea>
+                            <label for="form-name"><span>Name</span></label>
+                            <input id="form-name" class="entry" type="text" name="name" placeholder="John">
+                            <label for="form-email"><span>Email</span></label>
+                            <input id="form-email" class="entry" type="email" name="_replyto" placeholder="you@example.com">
+                            <label for="form-message"><span>Message</span></label>
+                            <textarea id="form-message" class="entry" name="Message" placeholder="Type your message here" style="height: 175px; max-height: 300px; resize:vertical;"></textarea>
                             <input id="submit-form-button" style="display: none" type="submit" value="Send">
-                          </form>
+                        </form>
                     <button id="send" class="sticky-bar-alt-link blue-button project-button" onclick="submitForm()"><span class="inner">Send</span></button>
                 </div>
             </section>
