@@ -1295,8 +1295,12 @@ img {
 
 	.project-inner h3, 
 	#about-inner-right h2, 
-	#top-bar .bar-name {
-		color: #ffffff;
+	#top-bar .bar-name,
+	#send span,
+	.icon-button,
+	#about-inner p,
+	.border-button {
+		color: #e4e4e4;
 	}
 
 	.project-inner > span, 
@@ -1307,6 +1311,25 @@ img {
 		color: #bfbfbf;
 	}
 
+	.icon-button,
+	.white-button,
+	.border-button {
+		border-color: #e4e4e4;
+	}
+
+	.icon-button:hover:after,
+	.white-button:hover:after,
+	.border-button:hover:after {
+		background: #e4e4e4;
+	}
+
+	.icon-button:hover,
+	.white-button:hover,
+	.border-button:hover {
+		border-color: #e4e4e4;
+		color: #292929;
+	}
+
 	.project, 
 	#sticky-bar,
 	#contact-inner,
@@ -1315,6 +1338,10 @@ img {
 	}
 	#sticky-bar {
 		box-shadow: 0 -3px 15px -3px rgba(0, 0, 0, 0.8);
+	}
+
+	#projects {
+		background: transparent;
 	}
 
 	.alt-project {
@@ -1340,7 +1367,7 @@ img {
 	}
 
 	.white-button {
-		color: white;
+		color: #e4e4e4;
 		background: transparent;
 	}
 
@@ -1356,13 +1383,5 @@ img {
 	.dark-transparent-button:after
 	{
 		background-color: rgba(0, 0, 0, 0.333);
-	}
-
-	.icon-button:hover {
-		color: #292929;
-	}
-
-	#send span{
-		color: white;
 	}
 }
